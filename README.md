@@ -1,26 +1,30 @@
-# Desafio técnico JN2
-Crud com REST API
+## Sistema de checkin para eventos
+## Sistema simples de checkin para eventos.
 
-Passos para executar :
+- O sistema ainda precisa de alguns pequenos ajustes;
 
-1. Após baixar/clonar o repositório.
+## Funcionalidades:
 
-2. Altere as variáveis de ambiente do MySQL no arquivo docker-compose.yml, se necessário.
-
-
-3. Abra o terminal e vá para o diretório onde o docker-compose.yml está localizado e execute o comando abaixo:
-
-   docker-compose up -d --build
-
-4. O passo 3 irá baixar todas as dependências, instalá-lo e configurar o container docker. Depois de executar o comando na etapa 3, ele iniciaria 3 contêineres. Um para MySQL outro para o CRUD e outro para o phpmyadmin. Também criaria o banco de dados CRUD no MySQL.
+### Checkin com preenchimento dos campos:
+- Nome;
+- Email;
+- Telefone;
+- Profissão (cadastradas em base de dados, usei uma lista de CBO do ministerio do trabalho);
 
 
-5. Execute o comando abaixo para obter a lista de contêineres em execução:
+### O sistema faz:
+- Checkin e guarda no banco o cadastro;
+- Gera um QR-CODE com o link para acesso do cadastro (somente leitura) do participante;
+- Imprime uma etiqueta com o nome e o QR-CODE que leva pro link com os dados do participanete (somente leitura);
 
-docker ps
+### Desenvolvido em:
+- Codeigniter;
+- Jquery;
+- HTML;
+- Bootstrap;
+- MySQL;
 
-6. Depois de executar as etapas acima com sucesso, abra o navegador e execute o URL abaixo:
+### Para usar você deverá:
 
-http://localhost:8000/
-
-7. Após isso você poderá usar o CRUD 
+- Instalar o PHP 5.6;
+- Banco de dados MySQL;
